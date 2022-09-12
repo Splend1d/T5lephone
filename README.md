@@ -17,7 +17,7 @@ https://github.com/voidful/t5lephone
 python pretraining.py
 You may change initialize model from T5, ByT5, LongT5 (Generative model recommended)
 
-! Alternatively you can use our checkpoints
+**! Alternatively you can use our checkpoints**
 ```
 from byt5 - voidful/phoneme_byt5
 from mt5 - voidful/phoneme_mt5
@@ -60,7 +60,7 @@ this turns the pickle file into a parquet file, which could be uploaded to the h
 Following process will utilize the data from using ```load_dataset``` method in huggingface
 
 
-!Alternatively you can skip 2. and 3. by downloading the preprocessed sample from huggingface
+**! Alternatively you can skip 2. and 3. by downloading the preprocessed sample from huggingface**
 ```
 ASR results from wav2vec2-large-960h-lv60-self : Splend1dchan/NMSQA_wav2vec2-large-960h-lv60-self
 ASR results from wav2vec2-large-10min-lv60-self : Splend1dchan/NMSQA_wav2vec2-large-10min-lv60-self
@@ -75,7 +75,7 @@ subword T5 parameters -- "max_len" : 512, "target_max_len": 16
 
 character T5 parameters -- "max_len" : 1024, "target_max_len": 128
 
-! Alternatively, you can use our (and other people's) checkpoint on huggingface to skip this step
+**! Alternatively, you can use our (and other people's) checkpoint on huggingface to skip this step**
 ```
 longformer : valhalla/longformer-base-4096-finetuned-squadv1
 deberta : Palak/microsoft_deberta-large_squad
@@ -93,14 +93,14 @@ Byt5lephone-small : Splend1dchan/t5lephone-small-textsquad
 for generative models run ``` evaluate_NMSQA.ipynb ```
 code is tested on GPU google colab environment
 
-! This produces the AOS/FF1 scores in the paper
+**! This produces the AOS/FF1 scores in the paper**
 
 ## End-to-End SQA
 
 ### Prepare HuBERT Features
 follow https://github.com/DanielLin94144/DUAL-textless-SQA
 
-! You can use prepared huggingface dataset ```Splend1dchan/NMSQA_hubert-l_features```
+**! Alternatively, you can use prepared huggingface dataset ```Splend1dchan/NMSQA_hubert-l_features```**
 These columns are provided in the dataset
 ```
 question_hubert_code : hubert clusters after reducing repetitive elements
@@ -194,7 +194,7 @@ python -m torch.distributed.launch \
 --notes wav2vec2-large-lv60_byt5-small_textdecoderonly_bs64
 
 ```
-! Alternatively, you can use our checkpoint on huggingface to skip this step
+**! Alternatively, you can use our checkpoint on huggingface to skip this step**
 
 All intermediate checkpoints could be found in the commits
 ```
@@ -213,7 +213,8 @@ Splend1dchan/wav2vec2-large-lv60_mt5lephone-small_textdecoderonly_bs64
 ```
 ### Evaluation
 1. Generate Prediction
-! It is advised to generate while training (it is also quite time consuming), so intermediate checkpoints are not lost
+
+**! It is advised to generate while training (it is also quite time consuming), so intermediate checkpoints are not lost**
 ```bash
 n=4502
 while true
