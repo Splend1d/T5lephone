@@ -60,8 +60,10 @@ this turns the pickle file into a parquet file, which could be uploaded to the h
 Following process will utilize the data from using ```load_dataset``` method in huggingface
 
 
-**! Alternatively you can skip 2. and 3. by downloading the preprocessed sample from huggingface**
+**! Alternatively you can skip ASR generation by downloading the preprocessed sample from huggingface**
 ```
+# question_normalized_text column : ASR results
+# question_times : timespan for each word in the ASR results
 ASR results from wav2vec2-large-960h-lv60-self : Splend1dchan/NMSQA_wav2vec2-large-960h-lv60-self
 ASR results from wav2vec2-large-10min-lv60-self : Splend1dchan/NMSQA_wav2vec2-large-10min-lv60-self
 ```
@@ -114,7 +116,7 @@ ex : question_hubert_code = [52,91] and question_hubert_cnt = [3,4]
 ```
 ### Training
 
- ```git clone {transformer repo}```
+```gh repo clone huggingface/transformers```
 
 move run_qa_nmsqa.py under ```transformers/examples/pytorch/question-answering```
 
