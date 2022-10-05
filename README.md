@@ -71,7 +71,7 @@ ASR results from wav2vec2-large-10min-lv60-self : Splend1dchan/NMSQA_wav2vec2-la
 
 for extractive models (longformer, deberta), follow huggingface ```run_squad.py```
 
-for generative models (T5 + variants), run ```finetune_text2text.py```
+for generative models (T5 + variants), run ```finetune_text2text.py``` with ```transformers==4.18.0```
 
 subword T5 parameters -- "max_len" : 512, "target_max_len": 16
 
