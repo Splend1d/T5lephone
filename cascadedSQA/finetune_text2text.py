@@ -279,7 +279,6 @@ args_dict = {
   "save_total_limit" : 100,
   "push_to_hub" : False,
   "remove_unused_columns" : False
-  #"hub_token" : "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"
 }
 import os
 os.environ["WANDB_DISABLED"] = "true"
