@@ -35,7 +35,7 @@ for i in tqdm(range(len(df))):
 
         if col == "content_full_audio_path":
             assert df[col][i] != None
-            files = sorted([f for f in asr if df[col][i][:-4] + "_" in f and f.endswith(".mp3")],
+            files = sorted([f for f in asr if df[col][i][:-6] + "_" in f and (f.endswith(".mp3") or f.endswith(".wav"))],
                            key=lambda x: int(x.split("-")[-1].split(".")[0]))
             print(files)
             # s()
