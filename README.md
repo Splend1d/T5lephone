@@ -141,9 +141,11 @@ python -m torch.distributed.launch \
 
 **! Models of length <= 512 is not supported, as some questions exceed this length which results in the data preprocessing being frozen**
 
+```
 ByT5-small setting : google/byt5-small, max_length = 1024
 ByT5lephone setting : voidful/phoneme_byt5_g2p_v1, max length = 1024
 longformer setting : allenai/longformer-base-4096, max_length = 1024 or 4096
+```
 
 ### Evaluation 
 
