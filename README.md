@@ -116,11 +116,7 @@ ex : question_hubert_code = [52,91] and question_hubert_cnt = [3,4]
 ```
 ### Training
 
-```gh repo clone huggingface/transformers```
 
-move run_qa_nmsqa.py under ```transformers/examples/pytorch/question-answering```
-
-Then train
 
 ```bash
 # Change max_seq_len according to model
@@ -142,6 +138,8 @@ python -m torch.distributed.launch \
   --ddp_find_unused_parameters=True \
   --output_dir {output dir} 
  ```
+
+**! Models of length <= 512 is not supported, as some questions exceed this length which results in the data preprocessing being frozen**
 
 ### Evaluation 
 
