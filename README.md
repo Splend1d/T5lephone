@@ -225,7 +225,7 @@ Splend1dchan/wav2vec2-large-lv60_mt5lephone-small_textdecoderonly_bs64
 n=4502
 while true
 do
-    FILE=/work/twskvfb446/facebook/wav2vec2-large-lv60_google/byt5-base_SpeechMixEEDT5_wav2vec2-large-lv60_byt5-base_textdecoderonly_bs64/checkpoint-${n}
+    FILE={PATH_TO_MODEL_PLACEHOLDER}/checkpoint-${n}
     if [ -f "${FILE}/pytorch_model.bin" ]; then
         echo "running eval ${n}"
         python3 eval_hf_fast.py --speech_model_config facebook/wav2vec2-large-lv60 \
