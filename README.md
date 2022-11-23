@@ -228,7 +228,7 @@ do
     FILE={PATH_TO_MODEL_PLACEHOLDER}/checkpoint-${n}
     if [ -f "${FILE}/pytorch_model.bin" ]; then
         echo "running eval ${n}"
-        python3 eval_hf_fast.py --speech_model_config facebook/wav2vec2-large-lv60 \
+        python3 eval.py --speech_model_config facebook/wav2vec2-large-lv60 \
         --nlp_model_config google/byt5-small \
         --nlp_model_decoder_only \
         --SpeechMixEEDT5eval \
