@@ -201,6 +201,13 @@ python -m torch.distributed.launch \
 --notes wav2vec2-large-lv60_byt5-small_textdecoderonly_bs64
 
 ```
+
+```
+ByT5 setting : google/byt5-small
+ByT5lephone setting : voidful/phoneme_byt5,
+mT5 setting : google/mt5-small,
+mT5lephone setting : voidful/phoneme-mt5
+```
 **! Alternatively, you can use our checkpoint on huggingface to skip this step**
 
 All intermediate checkpoints could be found in the commits
